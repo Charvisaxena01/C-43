@@ -117,14 +117,15 @@ function draw() {
     player.velocityX=0;
     obstaclesGroup.setVelocityXEach(0);
     bananaGroup.setVelocityXEach(0);
-player.visible = false;
+player.visible = false
     //change the boy animation
     player.changeAnimation("collided", player_collided);
 
     //set lifetime of the game objects so that they are never destroyed
     obstaclesGroup.setLifetimeEach(-1);
     bananaGroup.setLifetimeEach(-1);
-
+obstaclesGroup.destroyEach()
+bananaGroup.destroyEach()
     if (mousePressedOver(restart)) {
       reset();
     }
